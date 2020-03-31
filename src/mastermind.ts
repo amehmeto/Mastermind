@@ -3,4 +3,3 @@ export function evaluate(secret: string[], guess: string[]): GuessResult {
 }
 
 type GuessResult = [number, number]
-

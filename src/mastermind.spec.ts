@@ -1,13 +1,12 @@
 import {evaluate} from './mastermind'
 
 describe('Mastermind kata', () => {
-    it('should return 0 well-placed and 0 misplaced given [blue] secret and [red] guess', () => {
-        const secret = ['blue']
-        const guess = ['red']
-        const WELL_PLACED = 0
-        const MISPLACED = 0
+    it.each(
+        [
+            [0, 0, ['blue'], ['red']],
+        ]
+    )('should return %i well-placed and %i misplaced given %o secret and %o guess', (wellplaced: number, misplaced: number, secret: string[], guess:string[] ) => {
         expect(evaluate(secret, guess))
-            .toStrictEqual([WELL_PLACED, MISPLACED])
+            .toStrictEqual([wellplaced, misplaced])
     })
-}
-)
+})
