@@ -2,7 +2,7 @@
   "name": "mastermind",
   "version": "1.0.0",
   "description": "The idea of this Kata is to code an algorithm capable of playing the codebreaker role in mastermind: answering the number of well placed and misplaced colors.",
-  "main": "index.js",
+  "main": "mastermind.js",
   "scripts": {
     "test": "jest"
   },
