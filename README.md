@@ -1,12 +1,12 @@
-#Mastermind
+# Mastermind
 
-###Difficulty: medium
+### Difficulty: medium
 
 Have you ever played Mastermind ? This game where one player, a codemaker, has to choose a secret combination of colored pegs and then make it guess to someone else, a codebreaker. The codemaker is answering to each guess attempt of the codebreaker by indicating only the number of well placed colors and the number of correct but misplaced colors.
 
 If you remember playing the game, being the one who guesses is very brain demanding, whereas the other player get bored rapidly.
 
-#Problem Description
+# Problem Description
 
 The idea of this Kata is to code an algorithm capable of playing this boring role: answering the number of well placed and misplaced colors.
 
