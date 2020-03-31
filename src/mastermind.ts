@@ -1,7 +1,19 @@
 export function evaluate(secret: string[], guess: string[]): GuessResult {
-    if (areArraysEqual(secret, guess))
-        return [1, 0]
-    return [0, 0]
+    let misplaced: number = 0
+    let wellplaced: number = 0
+    for (let i = 0; secret[i]; i++) {
+        if (guess.includes(secret[i])) {
+            if (isSameIndex(guess, secret, i))
+                wellplaced++
+            else
+                misplaced++
+        }
+    }
+    return [wellplaced, misplaced]
+}
+
+function isSameIndex(guess: string[], secret: string[], i: number) {
+    return guess[i] === secret[i];
 }
 
 function areArraysEqual(a: string[], b: string[]) {
