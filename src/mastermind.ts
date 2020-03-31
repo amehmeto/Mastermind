@@ -1,23 +1,22 @@
 export function evaluate(secret: string[], guess: string[]): GuessResult {
-    let misplaced: number = 0
-    let wellplaced: number = 0
-    for (let i = 0; secret[i]; i++) {
-        if (guess.includes(secret[i])) {
-            if (isSameIndex(guess, secret, i))
-                wellplaced++
-            else
-                misplaced++
-        }
-    }
-    return [wellplaced, misplaced]
+    let guessResult: GuessResult = [0, 0]
+    for (let i = 0 ; secret[i] ; i++)
+        if (guess.includes(secret[i]))
+            guessResult = incrementGuessResult(guess, secret, i, guessResult)
+    return guessResult
+}
+
+function incrementGuessResult(guess: string[], secret: string[], i: number, guessResult: GuessResult): GuessResult {
+    const wellplaced = 0, misplaced = 1
+    if (isSameIndex(guess, secret, i))
+        guessResult[wellplaced]++
+    else
+        guessResult[misplaced]++
+    return guessResult
 }
 
 function isSameIndex(guess: string[], secret: string[], i: number) {
     return guess[i] === secret[i];
-}
-
-function areArraysEqual(a: string[], b: string[]) {
-    return JSON.stringify(a) === JSON.stringify(b)
 }
 
 type GuessResult = [number, number]
