@@ -1,0 +1,28 @@
+{
+  "name": "mastermind",
+  "version": "1.0.0",
+  "description": "The idea of this Kata is to code an algorithm capable of playing the codebreaker role in mastermind: answering the number of well placed and misplaced colors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amehmeto/Mastermind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amehmeto/Mastermind/issues"
+  },
+  "homepage": "https://github.com/amehmeto/Mastermind#readme",
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.8",
+    "jest": "^25.2.4",
+    "ts-jest": "^25.3.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {}
+}
